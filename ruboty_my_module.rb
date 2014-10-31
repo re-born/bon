@@ -24,5 +24,13 @@ module Ruboty
 	 message.reply "http://www.bijint.com/kyoto/tokei_images/#{formatted_time}.jpg"
       end
     end
+
+    class Feeling < Base
+      on /feeling( me)?\z/i, name: "feeling", description: "Ask bon about him feelings"
+
+      def feeling(message)
+        message.reply %w(Anger Hurt Embarrassed Devastated Threatened Jealous Insecure Hateful Violated Resentful Mad Enraged Furious Aggressive Provoked Hostile Frustrated Infuriated Irritated Distant Withdrawn Suspicious Critical Skeptical Sarcastic Disgust Disapproval Judgmental Loathing Disappointed Repugnant Revolted Awful Revulsion Detestable Avoidance Aversion Hesitant Sad Guilty Remorseful Ashamed Abandoned Ignored Victimized Despair Powerless Vulnerable Depressed Inferior Empty Lonely Abandoned Isolated Bored Apathetic Indifferent Happy Optimistic Inspired Open Intimate Playful Sensitive Peaceful Hopeful Loving Powerful Provocative Courageous Accepted Fulfilled Respected Proud Confident Important Interested Inquisitive Amused Joyful Ecstatic Liberated Surprise Excited Energetic Eager Amazed Awe Astonished Confused Perplexed Disillusioned Startled Dismayed Shocked Fear Scared Terrified Frightened Anxious Overwhelmed Worried Insecure Inadequate Inferior Submissive Worthless Insignificant Rejected Alienated Inadequate Humiliated Disrespected Ridiculed).sample
+      end
+    end
   end
 end
