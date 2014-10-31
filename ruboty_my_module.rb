@@ -15,5 +15,14 @@ module Ruboty
         message.reply %w(daichi kabocha mondamin bon satomi sosuke taisho6339 terrine).map{|a| "@#{a}"}.sample
       end
     end
+
+    class Bijin < Base
+      on /bijin( me)?\z/i, name: "bijin", description: "Show time"
+
+      def bijin(message)
+      	 formatted_time = Time.now.strftime("%H%M")
+	 message.reply "http://www.bijint.com/kyoto/tokei_images/#{formatted_time}.jpg"
+      end
+    end
   end
 end
