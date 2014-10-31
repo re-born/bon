@@ -21,7 +21,8 @@ module Ruboty
 
       def bijin(message)
       	 formatted_time = Time.now.strftime("%H%M")
-	 message.reply "http://www.bijint.com/kyoto/tokei_images/#{formatted_time}.jpg"
+         area = %w(jp 2012jp 2011jp hokkaido aomori iwate sendai akita ibaraki tochigi gunma saitama chiba tokyo niigata kanazawa fukui yamanashi nagano shizuoka nagoya kyoto osaka kobe nara tottori okayama hiroshima yamaguchi kagawa fukuoka saga nagasaki kumamoto miyazaki kagoshima okinawa taiwan hawaii seifuku macho tv-asahi wasedastyle cc).sample
+      	 message.reply "http://www.bijint.com/#{area}/tokei_images/#{formatted_time}.jpg"
       end
     end
 
