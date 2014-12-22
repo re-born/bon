@@ -8,6 +8,14 @@ module Ruboty
       end
     end
 
+    class Icon < Base
+      on /icon( me)? ?(?<keyword>.+)?/, name: 'icon', description: "Seacrh url for icon"
+
+      def icon(message)
+        message.reply "https://www.google.co.jp/search?q=#{message[:keyword]}&tbm=isch&tbs=isz:i"
+      end
+    end
+
     class Roulette < Base
       on /roulette( me)?\z/i, name: "roulette", description: "Assign someone"
 
